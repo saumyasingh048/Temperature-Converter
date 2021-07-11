@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This webpage lets you convert interchangeably between different units of Temperature, like, celsius, fahrenheit, kelvin, and, rankine. I have created this using basic HTML5, CSS3, JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="HTML5, CSS3, JS, JavaScript, Web Development, Front End Developer, Learning is Fun, Practice makes a man perfect"
+    />
+    <meta name="author" content="Saumya Singh" />
+    <title>Temperature Converter</title>
+    <script
+      src="https://kit.fontawesome.com/b174889818.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="top d-flex align-items-center">
+      <h1 class="primary-heading">TempConversion</h1>
+    </section>
+    <section class="main">
+      <h1 class="secondary-heading">Temperature Converter</h1>
+      <p class="paragraph">
+        Temperature degrees conversions of Fahrenheit (°F), Celsius (°C), Kelvin
+        (K), Rankine (°R).
+      </p>
+      <p class="paragraph">
+        Enter the temperature in one of the text boxes and press the
+        <em>Convert</em>
+        button:
+      </p>
+    </section>
+    <section class="conversion">
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <td><label for="f" class="label">Fahrenheit:</label></td>
+              <td><input type="number" id="f" /></td>
+              <td><span class="unit">°F</span></td>
+              <td><button class="btn">Convert</button></td>
+            </tr>
+            <tr>
+              <td><label for="r" class="label">Rankie:</label></td>
+              <td><input type="number" id="r" /></td>
+              <td><span class="unit">°R</span></td>
+              <td><button class="btn">Convert</button></td>
+            </tr>
+            <tr>
+              <td><label for="c" class="label">Celsius</label></td>
+              <td><input type="number" id="c" /></td>
+              <td><span class="unit">°C</span></td>
+              <td><button class="btn">Convert</button></td>
+            </tr>
+            <tr>
+              <td><label for="C" class="label">Centigrade:</label></td>
+              <td><input type="number" id="C" /></td>
+              <td><span class="unit">°C</span></td>
+              <td><button class="btn">Convert</button></td>
+            </tr>
+            <tr>
+              <td><label for="k" class="label">Kelvin:</label></td>
+              <td><input type="number" id="k" /></td>
+              <td><span class="unit">K</span></td>
+              <td><button class="btn">Convert</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
