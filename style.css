@@ -1,6 +1,4 @@
 /* ******************* */
-/* Google Fonts */
-/* ******************* */
 /* CSS Reset */
 * {
   margin: 0;
@@ -34,6 +32,27 @@
   --button-font-size: 1.2em;
   --button-background-color: #000000;
 }
+
+/* ******************* */
+/* Loader */
+.content {
+  display: none;
+}
+
+.loader {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+}
+.loader img {
+  width: 100%;
+}
+
 /* ******************* */
 /* Body */
 body {
@@ -65,10 +84,38 @@ input {
   padding: 10px;
   margin: 5px;
 }
-.btn:hover {
+.btn:hover,
+.btn-end:hover {
   background-color: rgb(155, 155, 104);
   transition: all 0.3s ease-in-out 0s;
 }
+.btn {
+  font-size: var(--button-font-size);
+  background-color: #664;
+  padding: 5px 7px;
+  border-radius: 5px;
+  color: #f0f0d0;
+  border: none;
+  cursor: pointer;
+}
+.btn-sm {
+  display: none;
+}
+.btn-end {
+  font-size: var(--button-font-size);
+  background-color: #664;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px;
+  color: #f0f0d0;
+  border: none;
+  cursor: pointer;
+}
+.label {
+  font-size: 1.5rem;
+  width: 100px;
+}
+
 /* ******************* */
 /* Utility Classes */
 .d-flex {
@@ -83,6 +130,9 @@ input {
 }
 .justify-content-center {
   justify-content: center;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
 }
 .center {
   text-align: center;
@@ -116,30 +166,22 @@ input {
   font-size: var(--paragraph-font-size);
   padding: 15px 0px;
 }
-.btn {
-  font-size: var(--button-font-size);
-  background-color: #664;
-  padding: 5px 7px;
-  border-radius: 5px;
-  color: #f0f0d0;
-  border: none;
-  cursor: pointer;
-}
-.label {
-  font-size: 1.5rem;
-  width: 100px;
-}
 
 /* Media Query */
 @media screen and (max-device-width: 600px) {
   .btn {
     display: none;
   }
-  .top {
-    justify-content: center;
-  }
-  .secondary-heading {
-    text-align: center;
+  .btn-sm {
+    display: block;
+    font-size: var(--button-font-size);
+    background-color: #664;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px;
+    color: #f0f0d0;
+    border: none;
+    cursor: pointer;
   }
   .conversion {
     margin: auto;
@@ -147,6 +189,23 @@ input {
   .main {
     padding: 1.2rem 2.2rem;
   }
+  .top {
+    padding: 2.2rem;
+  }
 }
 @media screen and (max-device-width: 425px) {
+  .conversion {
+    width: 80%;
+  }
+  .calc2 tbody tr td input {
+    width: 100%;
+  }
+}
+@media screen and (max-device-width: 350px) {
+  .conversion {
+    width: 95%;
+  }
+  .calc2 tbody tr td input {
+    width: 100%;
+  }
 }
